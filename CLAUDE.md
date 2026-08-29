@@ -39,6 +39,22 @@ No chapter-by-chapter approval. Write every chapter first, run the full text thr
 then create a Google Doc with `GOOGLEDOCS_CREATE_DOCUMENT_MARKDOWN` via Composio and send me the link.
 Wait for my OK before starting design. Revisions update the *same* doc with `GOOGLEDOCS_UPDATE_DOCUMENT_MARKDOWN`.
 
+## Images I add to the Google Doc
+When I review the draft I edit text and drop images at specific spots. Before designing, re-read the doc with
+`GOOGLEDOCS_GET_DOCUMENT_BY_ID` (not the plaintext tool — it drops images), download each `contentUri` into
+`assets/`, and record which chapter, section and pair of paragraphs it sat between.
+**Place every image in exactly that spot** — never move one to another chapter, pool them at a chapter end, or
+drop one. The layout is your job: full text-column width, aspect ratio preserved, landscape 140–220px tall,
+portrait at half column, nothing upscaled past its native size, numbered `Figure 3-1` / `شكل 3-1`, caption one
+step smaller than body text. Never split a figure across a page — push the whole thing to the next page instead.
+
+## Social posts, after the PDF
+Once the PDF and the improvement suggestions are delivered, ask whether I want the two launch images.
+Build them from `templates/social-posts/NajdeahSocialPost.html` — landscape 1200×630 and square 1080×1080 —
+using **the same cover** the book was designed with (same photo, crop, accent, title-block placement) and
+**the same language** as the book, Arabic posts RTL at the ×0.80 scale. Pills carry real facts from the book.
+`templates/social-posts/reference/` shows what correct output looks like.
+
 ## Writing voice
 `skills/Najdeah-writes.md` — use it for all book content: practitioner-mentor voice, rule of thumb → formula →
 worked example on real datasheet values → rounded buildable number → cited clause → practical decision.
