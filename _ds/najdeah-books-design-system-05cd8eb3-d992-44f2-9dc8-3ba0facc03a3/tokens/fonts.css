@@ -1,0 +1,14 @@
+/* --- Latin (English books) ---------------------------------------------------
+   Body text in the source guide is Times New Roman (TimesNewRomanPSMT / -BoldMT).
+   Display/cover type is TheSans-Bold (LucasFonts) — not freely licensed.
+   SUBSTITUTIONS (flagged to the client): Tinos = metric-compatible Times New Roman clone,
+   Fira Sans = nearest humanist sans to TheSans. Replace with the licensed binaries if available. */
+@import url("https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Sans:wght@400;500;600;700;800&display=swap");
+
+/* --- Arabic (Arabic books only) ----------------------------------------------
+   Madani Arabic (Acadeemi). Client-supplied. Use for Arabic-language books and
+   any Arabic copy; never for English-language titles. */
+@font-face{font-family:"Madani Arabic";src:url("../assets/fonts/madani-arabic-demo-thin.otf") format("opentype");font-weight:200;font-style:normal;font-display:swap}
+@font-face{font-family:"Madani Arabic";src:url("../assets/fonts/madani-arabic-demo-regular.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Madani Arabic";src:url("../assets/fonts/madani-arabic-demo-bold.otf") format("opentype");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Madani Arabic";src:url("../assets/fonts/madani-arabic-demo-black.otf") format("opentype");font-weight:900;font-style:normal;font-display:swap}
