@@ -1,0 +1,27 @@
+/* Najdeah cover series — 10 approved palettes.
+   Apply one class per book; the cover construction never changes.
+   accent = title rule / sub-headings, bar = edition bar, tint = interior page tint. */
+
+:root {
+  --najdeah-navy: #142846;
+  --najdeah-orange: #f4642f;
+  --najdeah-light-orange: #fa8a3c;
+  --najdeah-magenta: #c42a60;
+  --najdeah-crimson: #e2334e;
+  --najdeah-teal: #1a7f85;
+  --najdeah-gold: #9c7c46;
+  --najdeah-tint-teal: #e6f1f1;
+  --najdeah-cream: #faf0dc;
+  --najdeah-ink: #161616;
+}
+
+.palette-01-orange        { --accent: #f4642f; --accent-2: #f4642f; --bar: #142846; --tint: #e6f1f1; }
+.palette-02-magenta       { --accent: #c42a60; --accent-2: #c42a60; --bar: #142846; --tint: #e6f1f1; }
+.palette-03-crimson       { --accent: #e2334e; --accent-2: #e2334e; --bar: #142846; --tint: #e6f1f1; }
+.palette-04-light-orange  { --accent: #fa8a3c; --accent-2: #fa8a3c; --bar: #142846; --tint: #e6f1f1; }
+.palette-05-teal          { --accent: #1a7f85; --accent-2: #1a7f85; --bar: #142846; --tint: #e6f1f1; }
+.palette-06-gold          { --accent: #9c7c46; --accent-2: #9c7c46; --bar: #142846; --tint: #faf0dc; }
+.palette-07-orange-magenta{ --accent: #f4642f; --accent-2: #c42a60; --bar: #142846; --tint: #e6f1f1; }
+.palette-08-teal-orange   { --accent: #1a7f85; --accent-2: #f4642f; --bar: #142846; --tint: #e6f1f1; }
+.palette-09-crimson-light { --accent: #e2334e; --accent-2: #fa8a3c; --bar: #142846; --tint: #e6f1f1; }
+.palette-10-navy-led      { --accent: #142846; --accent-2: #f4642f; --bar: #142846; --tint: #ffffff; }
