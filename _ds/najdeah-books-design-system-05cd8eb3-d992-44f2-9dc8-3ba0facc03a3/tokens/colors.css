@@ -1,0 +1,51 @@
+:root{
+  /* Base palette — sampled from the Solar PV Plant Design Guide, 2nd edition */
+  --najdeah-teal:#1a7f85;
+  --najdeah-teal-deep:#136066;
+  --najdeah-teal-tint:#e6f1f1;
+  --najdeah-navy:#142846;
+  --najdeah-navy-deep:#0d1b30;
+  --najdeah-magenta:#c42a60;
+  --najdeah-crimson:#e2334e;
+  --najdeah-red:#f03c46;
+  --najdeah-orange:#f4642f;
+  --najdeah-orange-light:#fa8a3c;
+  --najdeah-gold:#9c7c46;
+  --najdeah-cream:#faf0dc;
+  --najdeah-ink:#161616;
+  --najdeah-ink-soft:#3c3c3c;
+  --najdeah-gray-600:#6b6b6b;
+  --najdeah-gray-400:#a6a6a6;
+  --najdeah-gray-200:#d8dcdc;
+  --najdeah-gray-100:#eef2f2;
+  --najdeah-paper:#ffffff;
+  --najdeah-paper-tint:#f4f8f8;
+
+  /* Semantic aliases */
+  --text-body:var(--najdeah-ink);
+  --text-muted:var(--najdeah-gray-600);
+  --text-heading:var(--najdeah-paper);
+  --text-subheading:var(--najdeah-orange);
+  --text-on-dark:var(--najdeah-paper);
+  --text-caption:var(--najdeah-gray-600);
+  --link:var(--najdeah-teal);
+  --link-hover:var(--najdeah-teal-deep);
+
+  --surface-page:var(--najdeah-paper);
+  --surface-page-tint:var(--najdeah-paper-tint);
+  --surface-heading:var(--najdeah-teal);
+  --surface-badge:var(--najdeah-teal);
+  --surface-callout:var(--najdeah-teal-tint);
+  --surface-table-header:var(--najdeah-gray-100);
+  --surface-edition-bar:var(--najdeah-navy);
+  --surface-cover:var(--najdeah-crimson);
+
+  --border-hairline:var(--najdeah-gray-200);
+  --border-rule-accent:var(--najdeah-orange);
+  --border-table:#9a9a9a;
+
+  --gradient-cover:linear-gradient(102deg,var(--najdeah-magenta) 0%,var(--najdeah-crimson) 26%,var(--najdeah-orange) 68%,var(--najdeah-orange-light) 100%);
+  --gradient-page:linear-gradient(180deg,#ffffff 0%,#ffffff 55%,var(--najdeah-paper-tint) 100%);
+  --gradient-cover-protection:linear-gradient(180deg,rgba(13,27,48,0.78) 0%,rgba(13,27,48,0.14) 24%,rgba(13,27,48,0) 44%,rgba(13,27,48,0.72) 74%,rgba(13,27,48,0.94) 100%); /* @kind color */
+  --gradient-navy:linear-gradient(96deg,var(--najdeah-navy) 0%,var(--najdeah-navy-deep) 62%,#050b16 100%);
+}
