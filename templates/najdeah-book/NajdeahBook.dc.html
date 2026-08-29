@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Najdeah book" description="A4 book: cover (approved series construction), half-title, contents and content pages." -->
+<helmet><script src="./ds-base.js"></script><link rel="stylesheet" href="../../assets/palettes.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400&family=Fira+Sans:wght@400;600;800&display=swap"><style>body{margin:0;background:#eef2f2}
+/* ---- Arabic edition ---- put dir="rtl" class="ar" on the page wrapper.
+   Arabic reads visually larger than Latin at the same px, so every size here is
+   the English size x0.80 (nearest .5px) with a taller line-height. Use these
+   classes instead of the inline English font shorthands on Arabic pages. */
+.ar{direction:rtl;text-align:right;font-family:'Noto Kufi Arabic','Cairo',Tahoma,sans-serif;font-variant-numeric:lining-nums}
+.ar .p,.ar li{font-size:9.5px;line-height:1.75}
+.ar .subhead{font-size:10.5px;line-height:1.5}
+.ar .pill{font-size:12.5px;line-height:1.4}
+.ar .chapter-title{font-size:21px;line-height:1.35}
+.ar table{font-size:8px;line-height:1.6}
+.ar header,.ar .folio{font-size:8.5px}
+.ar .cover-title{font-size:24px;line-height:1.25}
+.ar .cover-blurb{font-size:9.5px;line-height:1.7}
+/* English technical terms inside Arabic text: 1px smaller so they don't jump out. */
+.ar .en{font-family:'Fira Sans',sans-serif;font-size:8.5px;direction:ltr;unicode-bidi:isolate}
+/* Formulas and code keep the English size in both editions. */
+.ar .formula{font-family:'Tinos',serif;font-size:9.5px;direction:ltr;text-align:left;unicode-bidi:isolate}
+</style></helmet>
+<!-- A4: pages are 420x594 at screen scale (A-series 1:root2). Swap palette-01-orange for any palette in assets/palettes.css. -->
+<div class="palette-01-orange" style="display:flex;flex-wrap:wrap;gap:24px;padding:32px;justify-content:center;font-family:'Tinos',Times,serif">
+<section style="position:relative;width:420px;height:594px;overflow:hidden;background:#142846;box-shadow:0 10px 34px rgba(20,40,70,.18)">
+<img src="../../assets/cover-ground-mount.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,40,70,.78) 0%,rgba(20,40,70,0) 44%,rgba(20,40,70,.94) 100%)"></div>
+<img src="../../assets/logo-najdeah-white.png" alt="Najdeah" style="position:absolute;left:30px;top:22px;width:120px">
+<div style="position:absolute;left:30px;right:30px;top:53.5%">
+<div style="width:64px;height:4px;background:var(--accent,#f4642f);margin-bottom:16px"></div>
+<h1 style="margin:0;color:#fff;font:800 30px/1.12 'Fira Sans',sans-serif;letter-spacing:-.01em;text-shadow:0 2px 8px rgba(0,0,0,.5)">Book Title<br>Goes Here</h1>
+<p style="margin:12px 0 0;color:#fff;font:400 13px/1.4 'Tinos',serif;opacity:.92">By Nooraldean Najdeah</p>
+<p style="margin:24px 0 0;max-width:270px;color:#fff;opacity:.86;font:400 11.5px/1.42 'Tinos',serif;text-align:justify;hyphens:auto">One or two sentences on the purpose of this book: who it is for and the experience it is drawn from.</p>
+</div>
+<div style="position:absolute;left:0;right:0;bottom:0;height:34px;background:var(--bar,#142846);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 30px;font:400 10.5px/1.2 'Tinos',serif;letter-spacing:.08em"><span>FIRST EDITION</span><span>2026</span></div>
+</section>
+<section style="position:relative;width:420px;height:594px;overflow:hidden;background:#142846;box-shadow:0 2px 14px rgba(20,40,70,.12)"><img src="../../assets/photo-sunset-array.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"><div style="position:relative;padding:48px 30px 0"><h2 style="margin:0;color:#fff;font:400 26px/1.15 'Tinos',serif">Book Title Goes Here</h2><p style="margin:8px 0 0;color:#fff;font:700 15px/1.3 'Tinos',serif">— Nooraldean Najdeah —</p></div></section>
+<section style="position:relative;box-sizing:border-box;width:420px;height:594px;background:linear-gradient(180deg,#fff 0%,#fff 55%,#f4f8f8 100%);box-shadow:0 2px 14px rgba(20,40,70,.12);padding:22px 30px 26px;display:flex;flex-direction:column;overflow:hidden">
+<img src="../../assets/bg-network.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.14">
+<header style="position:relative;display:flex;align-items:flex-end;justify-content:space-between;gap:16px"><img src="../../assets/logo-najdeah-dark.png" alt="Najdeah" style="height:26px"><div style="min-width:38%"><div style="text-align:center;font:400 10px/1.2 'Tinos',serif">Nooraldean Najdeah</div><hr style="border:0;height:1.5px;background:var(--accent,#f4642f);margin:3px 0 0"></div></header>
+<div style="position:relative;flex:1;padding-top:24px">
+<div style="display:flex;margin-bottom:14px"><span style="display:inline-block;width:120px;background:#1a7f85;color:#fff;font:700 15px/1.25 'Tinos',serif;padding:5px 14px;border-radius:999px">Content:</span></div>
+<ol style="list-style:none;margin:0;padding:0;display:grid;gap:1px">
+<li style="display:grid;grid-template-columns:1fr auto;gap:12px;padding:4px 10px;background:#e6f1f1;border-radius:999px;font:400 11px/1.42 'Tinos',serif"><span>First chapter title</span><span>4</span></li>
+<li style="display:grid;grid-template-columns:1fr auto;gap:12px;padding:4px 10px;font:400 11px/1.42 'Tinos',serif"><span>Second chapter title</span><span>9</span></li>
+<li style="display:grid;grid-template-columns:1fr auto;gap:12px;padding:4px 10px;background:#e6f1f1;border-radius:999px;font:400 11px/1.42 'Tinos',serif"><span>Third chapter title</span><span>16</span></li>
+<li style="display:grid;grid-template-columns:1fr auto;gap:12px;padding:4px 10px;font:400 11px/1.42 'Tinos',serif"><span>Fourth chapter title</span><span>22</span></li>
+<li style="display:grid;grid-template-columns:1fr auto;gap:12px;padding:4px 10px;background:#e6f1f1;border-radius:999px;font:400 11px/1.42 'Tinos',serif"><span>About the Author</span><span>42</span></li>
+</ol>
+</div>
+<div style="position:relative;display:flex;justify-content:center"><span style="background:#1a7f85;color:#fff;font:700 10px/1 'Tinos',serif;padding:3px 8px;border-radius:4px">3</span></div>
+</section>
+<section style="position:relative;box-sizing:border-box;width:420px;height:594px;background:linear-gradient(180deg,#fff 0%,#fff 55%,#f4f8f8 100%);box-shadow:0 2px 14px rgba(20,40,70,.12);padding:22px 30px 26px;display:flex;flex-direction:column;overflow:hidden">
+<header><div style="text-align:center;font:400 10px/1.2 'Tinos',serif">Book Title Goes Here</div><hr style="border:0;height:1.5px;background:var(--accent,#f4642f);width:46%;margin:3px auto 0"></header>
+<div style="flex:1;padding-top:24px">
+<div style="display:flex;margin-bottom:14px"><span style="display:inline-block;background:#1a7f85;color:#fff;font:700 15px/1.25 'Tinos',serif;padding:5px 14px;border-radius:999px">Section heading</span></div>
+<p style="margin:0 0 8px;font:400 11.5px/1.42 'Tinos',serif;text-align:justify;hyphens:auto;color:#161616">Opening paragraph of the section: state the practical rule first, then the qualification. Keep sentences short and instructional.</p>
+<p style="margin:0 0 8px;font:400 11.5px/1.42 'Tinos',serif;text-align:justify;hyphens:auto;color:#161616">A second paragraph adds the exception — what changes for grid-connected versus off-grid work, or for a different site condition.</p>
+<p style="margin:16px 0 8px;color:var(--accent-2,#f4642f);font:400 12.5px/1.25 'Tinos',serif">Sub-heading</p>
+<ul style="list-style:none;margin:0 0 14px;padding:0;display:grid;gap:6px">
+<li style="display:grid;grid-template-columns:14px 1fr;font:400 11.5px/1.42 'Tinos',serif"><span>•</span><span>First question the reader must answer before starting.</span></li>
+<li style="display:grid;grid-template-columns:14px 1fr;font:400 11.5px/1.42 'Tinos',serif"><span>•</span><span>Second question, phrased as a practical check.</span></li>
+<li style="display:grid;grid-template-columns:14px 1fr;font:400 11.5px/1.42 'Tinos',serif"><span>•</span><span>Third question about cost, licence or logistics.</span></li>
+</ul>
+<p style="margin:16px 0 8px;color:#e2334e;font:400 12.5px/1.25 'Tinos',serif">DESIGN SUMMARY</p>
+<table style="width:100%;border-collapse:collapse;font:400 9.5px/1.3 'Tinos',serif">
+<tr><th style="border:.5px solid #9a9a9a;background:#eef2f2;padding:2px 4px">Parameter</th><th style="border:.5px solid #9a9a9a;background:#eef2f2;padding:2px 4px">Value</th><th style="border:.5px solid #9a9a9a;background:#eef2f2;padding:2px 4px">Reference</th></tr>
+<tr><td colspan="3" style="border:.5px solid #9a9a9a;background:#eef2f2;padding:2px 4px;text-align:center">Group row</td></tr>
+<tr><td style="border:.5px solid #9a9a9a;padding:2px 4px">Parameter name</td><td style="border:.5px solid #9a9a9a;padding:2px 4px">X unit</td><td style="border:.5px solid #9a9a9a;padding:2px 4px">Source</td></tr>
+<tr><td style="border:.5px solid #9a9a9a;padding:2px 4px">Parameter name</td><td style="border:.5px solid #9a9a9a;padding:2px 4px">X unit</td><td style="border:.5px solid #9a9a9a;padding:2px 4px">Source</td></tr>
+</table>
+</div>
+<div style="display:flex;justify-content:center"><span style="background:#1a7f85;color:#fff;font:700 10px/1 'Tinos',serif;padding:3px 8px;border-radius:4px">4</span></div>
+</section>
+</div>
+
+</x-dc>
+</body>
+</html>
