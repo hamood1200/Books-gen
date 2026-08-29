@@ -1,0 +1,111 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Najdeah — social posts</title>
+<link rel="stylesheet" href="../../_ds/najdeah-books-design-system-05cd8eb3-d992-44f2-9dc8-3ba0facc03a3/styles.css">
+<style>
+html,body{margin:0}
+body{background:#c9d2d2;font-family:var(--font-body);padding:28px;display:grid;gap:28px;justify-items:center}
+.post{position:relative;overflow:hidden;background:var(--gradient-navy);color:#fff}
+#landscape{width:1200px;height:630px}
+#square{width:1080px;height:1080px}
+/* atmosphere */
+.post .glow{position:absolute;border-radius:50%;pointer-events:none}
+.post .g1{width:760px;height:760px;right:-180px;top:-300px;background:radial-gradient(50% 50% at 50% 50%,rgba(244,100,47,.34) 0%,rgba(244,100,47,0) 70%)}
+.post .g2{width:620px;height:620px;left:-220px;bottom:-280px;background:radial-gradient(50% 50% at 50% 50%,rgba(26,127,133,.4) 0%,rgba(26,127,133,0) 72%)}
+.copy{position:relative;z-index:2}
+.eyebrow{display:flex;align-items:center;gap:12px;font:var(--weight-regular) 15px/1 var(--font-body);letter-spacing:.22em;text-transform:uppercase;opacity:.86}
+.eyebrow i{display:block;width:34px;height:var(--border-width-rule);background:var(--najdeah-orange)}
+.post h2{margin:0;font-family:var(--font-display);font-weight:var(--weight-display);letter-spacing:-.015em;line-height:1.06}
+.post .sub{font:var(--weight-regular) 20px/1.5 var(--font-body);opacity:.88}
+.meta{display:flex;flex-wrap:wrap;gap:10px}
+.pill{white-space:nowrap;border:1px solid rgba(255,255,255,.34);border-radius:var(--radius-capsule);padding:7px 16px;font:var(--weight-regular) 15px/1.2 var(--font-body);opacity:.94}
+.by{display:flex;align-items:center;gap:14px;white-space:nowrap;font:var(--weight-regular) 18px/1.3 var(--font-body)}
+.by img{width:64px}
+.by i{display:block;width:1px;height:26px;background:rgba(255,255,255,.4)}
+/* book */
+.scene{perspective:2600px;perspective-origin:50% 44%}
+.book{position:relative;width:420px;height:594px;transform-style:preserve-3d}
+.face{position:absolute;inset:0;transform-style:preserve-3d;backface-visibility:hidden}
+.front{transform:translateZ(21px);overflow:hidden;background:var(--najdeah-navy);box-shadow:inset 0 0 44px rgba(8,16,30,.3)}
+.front .photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.front .veil{position:absolute;inset:0;background:var(--gradient-cover-protection)}
+.front .light{position:absolute;inset:0;background:linear-gradient(264deg,rgba(6,12,22,.42) 0%,rgba(6,12,22,.14) 5%,rgba(255,255,255,.1) 24%,rgba(255,255,255,.02) 60%,rgba(255,255,255,.14) 96%)}
+.spine{position:absolute;top:0;right:0;width:42px;height:100%;transform-origin:right center;transform:rotateY(90deg) translateX(21px);background:var(--gradient-navy);box-shadow:inset 0 0 30px rgba(0,0,0,.55)}
+.spine .sheen{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.5) 0%,rgba(255,255,255,.12) 46%,rgba(0,0,0,.42) 100%)}
+.spine .txt{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:34px 0}
+.spine .stitle{writing-mode:vertical-rl;transform:rotate(180deg);color:#fff;font:var(--weight-display) 15px/1 var(--font-display);white-space:nowrap}
+.spine .srule{width:20px;height:var(--border-width-rule);background:var(--najdeah-orange)}
+.spine img{width:24px;opacity:.95}
+.pages{position:absolute;top:5px;left:0;width:38px;height:calc(100% - 10px);transform-origin:left center;transform:rotateY(-90deg) translateX(-19px);background:repeating-linear-gradient(90deg,#fdfdfb 0px,#fdfdfb 1px,#e2e0d8 1px,#e2e0d8 2.3px);box-shadow:inset 0 0 18px rgba(90,84,70,.4)}
+.back{transform:translateZ(-21px);background:var(--najdeah-navy-deep)}
+.head{position:absolute;left:0;top:0;width:100%;height:42px;transform-origin:top center;transform:rotateX(90deg) translateY(-21px);background:repeating-linear-gradient(0deg,#fdfdfb 0px,#fdfdfb 1px,#e4e2da 1px,#e4e2da 2.4px)}
+.bshadow{position:absolute;left:-10%;bottom:-44px;width:118%;height:86px;background:radial-gradient(50% 50% at 46% 50%,rgba(4,10,20,.62) 0%,rgba(4,10,20,.24) 48%,rgba(4,10,20,0) 78%);filter:blur(11px);transform:rotateX(84deg) translateZ(-40px) scaleY(.5)}
+/* cover artwork */
+.art{position:absolute;inset:0}
+.art .logo{position:absolute;left:var(--page-margin-x);top:26px;width:58px}
+.art .block{position:absolute;left:var(--page-margin-x);right:var(--page-margin-x);top:53.5%}
+.art .orule{width:64px;height:var(--border-width-rule);background:var(--najdeah-orange);margin-bottom:18px}
+.art h1{margin:0;color:#fff;font:var(--weight-display) var(--text-cover-title)/1.12 var(--font-display);letter-spacing:-.01em}
+.art .by2{margin:12px 0 0;color:#fff;font:var(--weight-regular) var(--text-cover-byline)/1.4 var(--font-body);opacity:.92}
+.art .blurb{margin:24px 0 0;max-width:270px;color:#fff;opacity:.86;font:var(--weight-regular) var(--text-small)/1.5 var(--font-body);text-align:justify;hyphens:auto}
+.art .bar{position:absolute;left:0;right:0;bottom:0;height:34px;background:var(--gradient-navy);font:var(--weight-regular) var(--text-edition)/34px var(--font-body)}
+.art .bar b{position:absolute;left:var(--page-margin-x);top:0;font-weight:var(--weight-regular)}
+.art .bar em{position:absolute;left:calc(100% - 82px);top:0;font-style:normal;text-align:right;width:52px}
+/* layouts */
+#landscape .inner{position:relative;z-index:2;height:100%;display:grid;grid-template-columns:1fr 430px;align-items:center;padding:0 0 0 68px}
+#landscape .copy{display:grid;gap:24px;max-width:600px}
+#landscape h2{font-size:56px}
+#landscape .scene{justify-self:center}
+#landscape .book{transform:scale(.82) rotateX(4deg) rotateY(-26deg) rotateZ(-.6deg)}
+#square .inner{position:relative;z-index:2;height:100%;display:grid;grid-template-rows:640px 1fr;padding:40px 70px 48px}
+#square .scene{justify-self:center;align-self:start;height:640px}
+#square .book{transform:scale(.86) translateX(-22px) translateY(14px) rotateX(4deg) rotateY(-26deg) rotateZ(-.6deg)}
+#square .copy{display:grid;gap:16px;align-content:end}
+#square h2{font-size:46px}
+#square .sub{font-size:19px;max-width:800px}
+.tag{position:absolute;right:0;top:0;bottom:0;width:14px;background:var(--gradient-cover);z-index:3}
+a{color:var(--link)}a:hover{color:var(--link-hover)}
+</style></head><body>
+
+<div class="post" id="landscape">
+  <div class="glow g1"></div><div class="glow g2"></div><div class="tag"></div>
+  <div class="inner">
+    <div class="copy">
+      <div class="eyebrow"><i></i>Second Edition · 2025</div>
+      <h2>Solar PV Plant<br>Design Guide</h2>
+      <p class="sub">A structured technical reference for engineers and students working in solar photovoltaics — sizing, structures, cables, standards and financials, drawn from project experience across the Middle East.</p>
+      <div class="meta"><span class="pill">43&nbsp;pages</span><span class="pill">NEC&nbsp;2020&nbsp;·&nbsp;IEC</span><span class="pill">Report&nbsp;templates</span></div>
+      <div class="by"><img src="../../assets/logo-najdeah-white.png" alt="Najdeah"><i></i><span>Nooralden&nbsp;Najdeah</span></div>
+    </div>
+    <div class="scene"><div class="book">
+      <div class="bshadow"></div><div class="face back"></div><div class="pages"></div><div class="head"></div>
+      <div class="spine"><div class="sheen"></div><div class="txt"><span class="stitle">Solar PV Plant Design Guide</span><span class="srule"></span><img src="../../assets/logo-najdeah-white.png" alt=""></div></div>
+      <div class="face front"><img class="photo" src="../../assets/cover-ground-mount.jpg" alt=""><div class="veil"></div>
+        <div class="art"><img class="logo" src="../../assets/logo-najdeah-white.png" alt="">
+          <div class="block"><div class="orule"></div><h1>Solar PV Plant<br>Design Guide</h1><p class="by2">By Nooralden Najdeah</p><p class="blurb">A structured technical reference for professionals and students working in solar photovoltaics, drawn from design and engineering experience across the Middle East.</p></div>
+          <div class="bar"><b>Second Edition &nbsp;·&nbsp; 2025</b></div></div>
+        <div class="light"></div></div>
+    </div></div>
+  </div>
+</div>
+
+<div class="post" id="square">
+  <div class="glow g1"></div><div class="glow g2"></div><div class="tag"></div>
+  <div class="inner">
+    <div class="scene"><div class="book">
+      <div class="bshadow"></div><div class="face back"></div><div class="pages"></div><div class="head"></div>
+      <div class="spine"><div class="sheen"></div><div class="txt"><span class="stitle">Solar PV Plant Design Guide</span><span class="srule"></span><img src="../../assets/logo-najdeah-white.png" alt=""></div></div>
+      <div class="face front"><img class="photo" src="../../assets/cover-ground-mount.jpg" alt=""><div class="veil"></div>
+        <div class="art"><img class="logo" src="../../assets/logo-najdeah-white.png" alt="">
+          <div class="block"><div class="orule"></div><h1>Solar PV Plant<br>Design Guide</h1><p class="by2">By Nooralden Najdeah</p><p class="blurb">A structured technical reference for professionals and students working in solar photovoltaics, drawn from design and engineering experience across the Middle East.</p></div>
+          <div class="bar"><b>Second Edition &nbsp;·&nbsp; 2025</b></div></div>
+        <div class="light"></div></div>
+    </div></div>
+    <div class="copy">
+      <div class="eyebrow"><i></i>Second Edition · 2025</div>
+      <h2>Solar PV Plant Design Guide</h2>
+      <p class="sub">Sizing, structures, cables, standards and financials for solar PV projects.</p>
+      <div class="by"><img src="../../assets/logo-najdeah-white.png" alt="Najdeah"><i></i><span>Nooralden&nbsp;Najdeah</span></div>
+    </div>
+  </div>
+</div>
+
+</body></html>
