@@ -1,0 +1,447 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "components/book/**",
+              "ui_kits/guide-book/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Madani Arabic|Tinos|Fira Sans))/i]",
+        "message": "Font not provided by the design system. Available: Madani Arabic, Tinos, Fira Sans."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='AuthorBio'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|photoSrc|children|style|key|ref|className|style|children)$/]",
+        "message": "<AuthorBio> doesn't accept that prop. Declared props: label, photoSrc, children, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='BodyText'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|align|indent|size|style|lang|key|ref|className|style|children)$/]",
+        "message": "<BodyText> doesn't accept that prop. Declared props: children, align, indent, size, style, lang."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='BodyText'] > JSXAttribute[name.name='align'] > Literal[value!=/^(?:justify|left|center|right)$/]",
+        "message": "<BodyText> align must be one of 'justify' | 'left' | 'center' | 'right'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='BodyText'] > JSXAttribute[name.name='lang'] > Literal[value!=/^(?:en|ar)$/]",
+        "message": "<BodyText> lang must be one of 'en' | 'ar'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='BookCover'] > JSXAttribute > JSXIdentifier[name!=/^(?:title|byline|blurb|note|edition|year|photoSrc|logoSrc|style|lang|key|ref|className|style|children)$/]",
+        "message": "<BookCover> doesn't accept that prop. Declared props: title, byline, blurb, note, edition, year, photoSrc, logoSrc, style, lang."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='BookCover'] > JSXAttribute[name.name='lang'] > Literal[value!=/^(?:en|ar)$/]",
+        "message": "<BookCover> lang must be one of 'en' | 'ar'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='BookPage'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|page|side|title|author|logoSrc|watermarkSrc|tint|style|lang|key|ref|className|style|children)$/]",
+        "message": "<BookPage> doesn't accept that prop. Declared props: children, page, side, title, author, logoSrc, watermarkSrc, tint, style, lang."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='BookPage'] > JSXAttribute[name.name='side'] > Literal[value!=/^(?:recto|verso)$/]",
+        "message": "<BookPage> side must be one of 'recto' | 'verso'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='BookPage'] > JSXAttribute[name.name='lang'] > Literal[value!=/^(?:en|ar)$/]",
+        "message": "<BookPage> lang must be one of 'en' | 'ar'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='BulletList'] > JSXAttribute > JSXIdentifier[name!=/^(?:items|marker|numbered|style|lang|key|ref|className|style|children)$/]",
+        "message": "<BulletList> doesn't accept that prop. Declared props: items, marker, numbered, style, lang."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='BulletList'] > JSXAttribute[name.name='lang'] > Literal[value!=/^(?:en|ar)$/]",
+        "message": "<BulletList> lang must be one of 'en' | 'ar'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='FigureBlock'] > JSXAttribute > JSXIdentifier[name!=/^(?:src|alt|caption|captionPosition|frame|style|lang|key|ref|className|style|children)$/]",
+        "message": "<FigureBlock> doesn't accept that prop. Declared props: src, alt, caption, captionPosition, frame, style, lang."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='FigureBlock'] > JSXAttribute[name.name='captionPosition'] > Literal[value!=/^(?:above|below)$/]",
+        "message": "<FigureBlock> captionPosition must be one of 'above' | 'below'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='FigureBlock'] > JSXAttribute[name.name='lang'] > Literal[value!=/^(?:en|ar)$/]",
+        "message": "<FigureBlock> lang must be one of 'en' | 'ar'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='PageFolio'] > JSXAttribute > JSXIdentifier[name!=/^(?:page|style|key|ref|className|style|children)$/]",
+        "message": "<PageFolio> doesn't accept that prop. Declared props: page, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='PartOpener'] > JSXAttribute > JSXIdentifier[name!=/^(?:title|author|photoSrc|style|key|ref|className|style|children)$/]",
+        "message": "<PartOpener> doesn't accept that prop. Declared props: title, author, photoSrc, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='RunningHeader'] > JSXAttribute > JSXIdentifier[name!=/^(?:side|title|author|logoSrc|style|lang|key|ref|className|style|children)$/]",
+        "message": "<RunningHeader> doesn't accept that prop. Declared props: side, title, author, logoSrc, style, lang."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='RunningHeader'] > JSXAttribute[name.name='side'] > Literal[value!=/^(?:recto|verso)$/]",
+        "message": "<RunningHeader> side must be one of 'recto' | 'verso'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='RunningHeader'] > JSXAttribute[name.name='lang'] > Literal[value!=/^(?:en|ar)$/]",
+        "message": "<RunningHeader> lang must be one of 'en' | 'ar'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SectionHeading'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|width|align|style|lang|key|ref|className|style|children)$/]",
+        "message": "<SectionHeading> doesn't accept that prop. Declared props: children, width, align, style, lang."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SectionHeading'] > JSXAttribute[name.name='align'] > Literal[value!=/^(?:left|center)$/]",
+        "message": "<SectionHeading> align must be one of 'left' | 'center'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SectionHeading'] > JSXAttribute[name.name='lang'] > Literal[value!=/^(?:en|ar)$/]",
+        "message": "<SectionHeading> lang must be one of 'en' | 'ar'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SpecTableRow'] > JSXAttribute > JSXIdentifier[name!=/^(?:group|cells|key|ref|className|style|children)$/]",
+        "message": "<SpecTableRow> doesn't accept that prop. Declared props: group, cells."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SubHeading'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|tone|style|lang|key|ref|className|style|children)$/]",
+        "message": "<SubHeading> doesn't accept that prop. Declared props: children, tone, style, lang."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SubHeading'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:orange|crimson|teal)$/]",
+        "message": "<SubHeading> tone must be one of 'orange' | 'crimson' | 'teal'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SubHeading'] > JSXAttribute[name.name='lang'] > Literal[value!=/^(?:en|ar)$/]",
+        "message": "<SubHeading> lang must be one of 'en' | 'ar'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TocEntry'] > JSXAttribute > JSXIdentifier[name!=/^(?:title|page|key|ref|className|style|children)$/]",
+        "message": "<TocEntry> doesn't accept that prop. Declared props: title, page."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {
+      "AuthorBio": {
+        "replaces": []
+      },
+      "BodyText": {
+        "replaces": []
+      },
+      "BookCover": {
+        "replaces": []
+      },
+      "BookPage": {
+        "replaces": []
+      },
+      "BulletList": {
+        "replaces": []
+      },
+      "FigureBlock": {
+        "replaces": []
+      },
+      "PageFolio": {
+        "replaces": []
+      },
+      "PartOpener": {
+        "replaces": []
+      },
+      "RunningHeader": {
+        "replaces": []
+      },
+      "SectionHeading": {
+        "replaces": []
+      },
+      "SpecTableRow": {
+        "replaces": []
+      },
+      "SubHeading": {
+        "replaces": []
+      },
+      "TocEntry": {
+        "replaces": []
+      }
+    },
+    "tokens": [
+      "--align-body",
+      "--block-gap",
+      "--border-hairline",
+      "--border-rule-accent",
+      "--border-table",
+      "--border-width-hairline",
+      "--border-width-rule",
+      "--bullet-gap",
+      "--bullet-indent",
+      "--duration-base",
+      "--duration-fast",
+      "--ease-standard",
+      "--font-arabic",
+      "--font-arabic-display",
+      "--font-body",
+      "--font-display",
+      "--gradient-cover",
+      "--gradient-cover-protection",
+      "--gradient-navy",
+      "--gradient-page",
+      "--heading-capsule-pad-x",
+      "--heading-capsule-pad-y",
+      "--leading-body",
+      "--leading-body-ar",
+      "--leading-heading",
+      "--leading-heading-ar",
+      "--leading-loose",
+      "--leading-tight",
+      "--link",
+      "--link-hover",
+      "--measure-body",
+      "--najdeah-cream",
+      "--najdeah-crimson",
+      "--najdeah-gold",
+      "--najdeah-gray-100",
+      "--najdeah-gray-200",
+      "--najdeah-gray-400",
+      "--najdeah-gray-600",
+      "--najdeah-ink",
+      "--najdeah-ink-soft",
+      "--najdeah-magenta",
+      "--najdeah-navy",
+      "--najdeah-navy-deep",
+      "--najdeah-orange",
+      "--najdeah-orange-light",
+      "--najdeah-paper",
+      "--najdeah-paper-tint",
+      "--najdeah-red",
+      "--najdeah-teal",
+      "--najdeah-teal-deep",
+      "--najdeah-teal-tint",
+      "--opacity-hover",
+      "--opacity-watermark",
+      "--page-height",
+      "--page-margin-bottom",
+      "--page-margin-top",
+      "--page-margin-x",
+      "--page-width",
+      "--para-gap",
+      "--radius-badge",
+      "--radius-capsule",
+      "--radius-card",
+      "--radius-none",
+      "--radius-photo-frame",
+      "--radius-sm",
+      "--shadow-cover-byline",
+      "--shadow-cover-title",
+      "--shadow-inset-photo",
+      "--shadow-none",
+      "--shadow-page",
+      "--shadow-page-lifted",
+      "--space-0",
+      "--space-1",
+      "--space-2",
+      "--space-3",
+      "--space-4",
+      "--space-5",
+      "--space-6",
+      "--space-7",
+      "--space-8",
+      "--space-9",
+      "--surface-badge",
+      "--surface-callout",
+      "--surface-cover",
+      "--surface-edition-bar",
+      "--surface-heading",
+      "--surface-page",
+      "--surface-page-tint",
+      "--surface-table-header",
+      "--text-body",
+      "--text-body-size",
+      "--text-body-size-ar",
+      "--text-caption",
+      "--text-caption-size",
+      "--text-cover-byline",
+      "--text-cover-title",
+      "--text-cover-title-ar",
+      "--text-edition",
+      "--text-folio",
+      "--text-h1",
+      "--text-h2",
+      "--text-h2-ar",
+      "--text-h3",
+      "--text-heading",
+      "--text-muted",
+      "--text-on-dark",
+      "--text-small",
+      "--text-subheading",
+      "--text-table",
+      "--tracking-heading",
+      "--tracking-logotype",
+      "--tracking-none",
+      "--weight-arabic-black",
+      "--weight-arabic-thin",
+      "--weight-bold",
+      "--weight-display",
+      "--weight-regular"
+    ],
+    "tokenKinds": {
+      "--najdeah-teal": "color",
+      "--najdeah-teal-deep": "color",
+      "--najdeah-teal-tint": "color",
+      "--najdeah-navy": "color",
+      "--najdeah-navy-deep": "color",
+      "--najdeah-magenta": "color",
+      "--najdeah-crimson": "color",
+      "--najdeah-red": "color",
+      "--najdeah-orange": "color",
+      "--najdeah-orange-light": "color",
+      "--najdeah-gold": "color",
+      "--najdeah-cream": "color",
+      "--najdeah-ink": "color",
+      "--najdeah-ink-soft": "color",
+      "--najdeah-gray-600": "color",
+      "--najdeah-gray-400": "color",
+      "--najdeah-gray-200": "color",
+      "--najdeah-gray-100": "color",
+      "--najdeah-paper": "color",
+      "--najdeah-paper-tint": "color",
+      "--text-body": "font",
+      "--text-muted": "font",
+      "--text-heading": "font",
+      "--text-subheading": "font",
+      "--text-on-dark": "font",
+      "--text-caption": "font",
+      "--link": "color",
+      "--link-hover": "color",
+      "--surface-page": "color",
+      "--surface-page-tint": "color",
+      "--surface-heading": "color",
+      "--surface-badge": "color",
+      "--surface-callout": "color",
+      "--surface-table-header": "color",
+      "--surface-edition-bar": "color",
+      "--surface-cover": "color",
+      "--border-hairline": "color",
+      "--border-rule-accent": "color",
+      "--border-table": "color",
+      "--gradient-cover": "color",
+      "--gradient-page": "color",
+      "--gradient-cover-protection": "color",
+      "--gradient-navy": "color",
+      "--font-body": "font",
+      "--font-display": "font",
+      "--font-arabic": "font",
+      "--font-arabic-display": "font",
+      "--weight-arabic-thin": "font",
+      "--weight-arabic-black": "font",
+      "--text-body-size-ar": "font",
+      "--text-h2-ar": "font",
+      "--text-cover-title-ar": "font",
+      "--leading-body-ar": "font",
+      "--leading-heading-ar": "font",
+      "--text-cover-title": "font",
+      "--text-edition": "font",
+      "--text-cover-byline": "font",
+      "--text-h1": "font",
+      "--text-h2": "font",
+      "--text-h3": "font",
+      "--text-body-size": "font",
+      "--text-small": "font",
+      "--text-caption-size": "font",
+      "--text-table": "font",
+      "--text-folio": "font",
+      "--leading-tight": "font",
+      "--leading-heading": "font",
+      "--leading-body": "font",
+      "--leading-loose": "font",
+      "--weight-regular": "font",
+      "--weight-bold": "font",
+      "--weight-display": "font",
+      "--tracking-logotype": "font",
+      "--tracking-heading": "font",
+      "--tracking-none": "font",
+      "--align-body": "other",
+      "--space-0": "spacing",
+      "--space-1": "spacing",
+      "--space-2": "spacing",
+      "--space-3": "spacing",
+      "--space-4": "spacing",
+      "--space-5": "spacing",
+      "--space-6": "spacing",
+      "--space-7": "spacing",
+      "--space-8": "spacing",
+      "--space-9": "spacing",
+      "--page-width": "spacing",
+      "--page-height": "spacing",
+      "--page-margin-x": "spacing",
+      "--page-margin-top": "spacing",
+      "--page-margin-bottom": "spacing",
+      "--measure-body": "spacing",
+      "--heading-capsule-pad-y": "spacing",
+      "--heading-capsule-pad-x": "spacing",
+      "--bullet-indent": "spacing",
+      "--bullet-gap": "spacing",
+      "--para-gap": "spacing",
+      "--block-gap": "spacing",
+      "--radius-none": "radius",
+      "--radius-sm": "radius",
+      "--radius-capsule": "radius",
+      "--radius-badge": "radius",
+      "--radius-photo-frame": "radius",
+      "--radius-card": "radius",
+      "--border-width-hairline": "spacing",
+      "--border-width-rule": "spacing",
+      "--shadow-none": "shadow",
+      "--shadow-page": "shadow",
+      "--shadow-page-lifted": "shadow",
+      "--shadow-cover-title": "shadow",
+      "--shadow-cover-byline": "shadow",
+      "--shadow-inset-photo": "shadow",
+      "--ease-standard": "other",
+      "--duration-fast": "other",
+      "--duration-base": "other",
+      "--opacity-hover": "other",
+      "--opacity-watermark": "other"
+    },
+    "fontFamilies": [
+      "Fira Sans",
+      "Madani Arabic",
+      "Tinos"
+    ]
+  }
+}
