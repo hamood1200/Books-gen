@@ -1,0 +1,25 @@
+:root{
+  --radius-none:0;
+  --radius-sm:3px;
+  --radius-capsule:999px;
+  --radius-badge:4px;
+  --radius-photo-frame:34px;   /* the large rounded corner on cover photo frames */
+  --radius-card:6px;
+
+  --border-width-hairline:0.5px;
+  --border-width-rule:1.5px;
+
+  --shadow-none:none;
+  --shadow-page:0 2px 14px rgba(20,40,70,0.12);
+  --shadow-page-lifted:0 10px 34px rgba(20,40,70,0.18);
+  --shadow-cover-title:2px 2px 3px rgba(28,20,24,0.62);
+  --shadow-cover-byline:1px 1px 2px rgba(28,20,24,0.5);
+  --shadow-inset-photo:inset 0 0 0 4px #ffffff;
+
+  --ease-standard:cubic-bezier(0.4,0,0.2,1); /* @kind other */
+  --duration-fast:120ms; /* @kind other */
+  --duration-base:200ms; /* @kind other */
+
+  --opacity-hover:0.82; /* @kind other */
+  --opacity-watermark:0.14; /* @kind other */
+}
