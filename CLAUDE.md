@@ -2,10 +2,10 @@
 
 ## Building a book: follow the workflow, step by step
 `skills/Najdeah-book-workflow.md` is binding for every new book. Follow it in order, without skipping:
-questions (language, title, topics, page count, cover choice, palette choice) → research → write in Najdeah Writing →
-Chapter 1 → my review → approval → next chapter → … → last chapter approved → design with this design system →
-HTML first, tell me it's ready → wait for my approval → PDF.
-Never invent a cover design, a palette or a design system. Never move to the next chapter before I approve the current one.
+questions (language, title, topics, page count, cover, palette, project size, private-sector type) → research →
+top-10 problems list → write every chapter in Najdeah Writing → humanize → Google Doc → my review → approval →
+design with this design system → HTML first, tell me it's ready → wait for my approval → PDF → improvement suggestions.
+Never invent a cover design, a palette or a design system. Never start the design before I approve the Google Doc.
 Books are A4. Arabic is fully RTL with English numerals and English technical terms (Voc, MPPT, kW, IEC, NEC).
 Author: **Nooraldean Najdeah** / **نورالدين نجديّة**.
 
@@ -27,6 +27,17 @@ Ask every setup question through the `AskUserQuestion` popup, grouped up to 4 at
 Before asking which cover and which palette, **show them**: render the ten covers `1a`–`1j` as real thumbnails
 and the ten palettes as colour swatches on a canvas (`show_widget`, or an Artifact if I want to zoom around),
 then ask with the popup. Never describe a cover in words instead of showing it.
+
+## Show a live checklist
+From the end of the questions until the PDF, keep a visible checklist of every step and update it as each one
+finishes — questions → research → top-10 list → chapters (n of m) → humanize → Google Doc → my review →
+design → HTML → my approval → PDF → improvement suggestions → other-language offer. Never work silently.
+
+## Write the whole book, humanize it, then send a Google Doc
+No chapter-by-chapter approval. Write every chapter first, run the full text through `skills/humanizer/SKILL.md`
+(rewrite only — never change a fact, number, standard or citation, and never touch formulas, code or tables),
+then create a Google Doc with `GOOGLEDOCS_CREATE_DOCUMENT_MARKDOWN` via Composio and send me the link.
+Wait for my OK before starting design. Revisions update the *same* doc with `GOOGLEDOCS_UPDATE_DOCUMENT_MARKDOWN`.
 
 ## Writing voice
 `skills/Najdeah-writes.md` — use it for all book content: practitioner-mentor voice, rule of thumb → formula →
