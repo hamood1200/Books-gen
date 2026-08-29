@@ -1,0 +1,45 @@
+:root{
+  --font-body:"Tinos","Times New Roman",Times,serif;
+  --font-display:"Fira Sans","Segoe UI",Tahoma,sans-serif;
+  /* Arabic books only — see readme.md › Arabic typesetting */
+  --font-arabic:"Madani Arabic","Traditional Arabic",serif;
+  --font-arabic-display:"Madani Arabic","Traditional Arabic",serif;
+  --weight-arabic-thin:200;
+  --weight-arabic-black:900;
+  /* Madani has a smaller apparent x-height than Tinos — Arabic text needs
+     ~1pt more size and looser leading at the same optical scale. */
+  --text-body-size-ar:12.5px;
+  --text-h2-ar:16px;
+  --text-cover-title-ar:34px;
+  --leading-body-ar:1.7;
+  --leading-heading-ar:1.4;
+
+  /* Sizes are book-scale (measured against the 2nd edition at 100%) */
+  --text-cover-title:30px;
+  --text-edition:14px;
+  --text-cover-byline:13px;
+  --text-h1:26px;
+  --text-h2:15px;      /* teal capsule section heading */
+  --text-h3:12.5px;    /* orange sub-heading */
+  --text-body-size:11.5px;
+  --text-small:10px;
+  --text-caption-size:9px;
+  --text-table:9.5px;
+  --text-folio:10px;
+
+  --leading-tight:1.15;
+  --leading-heading:1.25;
+  --leading-body:1.42;
+  --leading-loose:1.6;
+
+  --weight-regular:400;
+  --weight-bold:700;
+  --weight-display:800;
+
+  --tracking-logotype:0.34em;
+  --tracking-heading:0.01em;
+  --tracking-none:0;
+
+  /* Book text is justified with hyphenation, as set in InDesign */
+  --align-body:justify; /* @kind other */
+}
