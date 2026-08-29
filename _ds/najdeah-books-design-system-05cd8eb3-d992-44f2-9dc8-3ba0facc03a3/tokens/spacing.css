@@ -1,0 +1,27 @@
+:root{
+  --space-0:0;
+  --space-1:2px;
+  --space-2:4px;
+  --space-3:6px;
+  --space-4:8px;
+  --space-5:12px;
+  --space-6:16px;
+  --space-7:24px;
+  --space-8:32px;
+  --space-9:48px;
+
+  /* Page geometry — A5-portrait book page, 1:1.414 */
+  --page-width:420px;
+  --page-height:594px;
+  --page-margin-x:30px;
+  --page-margin-top:22px;
+  --page-margin-bottom:26px;
+  --measure-body:100%;
+
+  --heading-capsule-pad-y:5px;
+  --heading-capsule-pad-x:14px;
+  --bullet-indent:14px;
+  --bullet-gap:6px;
+  --para-gap:8px;
+  --block-gap:14px;
+}
