@@ -1,0 +1,50 @@
+{
+  "brand": {
+    "navy": "#142846",
+    "orange": "#f4642f",
+    "lightOrange": "#fa8a3c",
+    "magenta": "#c42a60",
+    "crimson": "#e2334e",
+    "teal": "#1a7f85",
+    "gold": "#9c7c46",
+    "tintTeal": "#e6f1f1",
+    "cream": "#faf0dc",
+    "ink": "#161616"
+  },
+  "cover": {
+    "page": "A4", "size": [420, 594], "note": "420x594 is the A-series 1:sqrt2 ratio; scale up for A4 print (2480x3508 at 300dpi)",
+    "gradient": "linear-gradient(180deg, rgba(20,40,70,0.78) 0%, rgba(20,40,70,0) 44%, rgba(20,40,70,0.94) 100%)",
+    "gradientBrightSky": "linear-gradient(180deg, rgba(20,40,70,0.80) 0%, rgba(20,40,70,0.52) 48%, rgba(20,40,70,0.94) 100%)",
+    "logo": { "left": 30, "top": 22, "width": 120, "src": "assets/logo-najdeah-white.png" },
+    "rule": [64, 4],
+    "title": { "font": "Fira Sans ExtraBold", "size": 30, "tracking": "-0.01em", "shadow": "0 2px 8px rgba(0,0,0,0.5)" },
+    "byline": { "font": "Tinos", "size": 13 },
+    "blurb": { "font": "Tinos", "size": 11.5, "lineHeight": 1.42, "maxWidth": 270, "color": "rgba(255,255,255,0.86)" },
+    "editionBar": { "height": 34, "background": "#142846", "font": "Tinos", "size": 10.5, "tracking": "0.08em" },
+    "placements": ["53.5%", "58%", "bottom: 78px", "top: 96px", "centred", "right-aligned", "vertical rule left"]
+  },
+  "palettes": [
+    { "id": "01", "name": "Orange, canonical", "accent": "#f4642f", "accent2": "#f4642f", "bar": "#142846", "tint": "#e6f1f1", "use": "Flagship design guides." },
+    { "id": "02", "name": "Magenta", "accent": "#c42a60", "accent2": "#c42a60", "bar": "#142846", "tint": "#e6f1f1", "use": "Strongest over sunset photography." },
+    { "id": "03", "name": "Crimson", "accent": "#e2334e", "accent2": "#e2334e", "bar": "#142846", "tint": "#e6f1f1", "use": "Standards and safety titles." },
+    { "id": "04", "name": "Light orange", "accent": "#fa8a3c", "accent2": "#fa8a3c", "bar": "#142846", "tint": "#e6f1f1", "use": "Dark panel fields." },
+    { "id": "05", "name": "Teal", "accent": "#1a7f85", "accent2": "#1a7f85", "bar": "#142846", "tint": "#e6f1f1", "use": "Quietest of the ten." },
+    { "id": "06", "name": "Gold, cream interior", "accent": "#9c7c46", "accent2": "#9c7c46", "bar": "#142846", "tint": "#faf0dc", "use": "Anniversary or collected edition." },
+    { "id": "07", "name": "Orange over magenta", "accent": "#f4642f", "accent2": "#c42a60", "bar": "#142846", "tint": "#e6f1f1", "use": "Orange rule, magenta sub-headings." },
+    { "id": "08", "name": "Teal and orange", "accent": "#1a7f85", "accent2": "#f4642f", "bar": "#142846", "tint": "#e6f1f1", "use": "The interior pairing, used on the cover." },
+    { "id": "09", "name": "Crimson to light orange", "accent": "#e2334e", "accent2": "#fa8a3c", "bar": "#142846", "tint": "#e6f1f1", "use": "Warm half of the original gradient." },
+    { "id": "10", "name": "Navy-led", "accent": "#142846", "accent2": "#f4642f", "bar": "#142846", "tint": "#ffffff", "use": "Technical reference volume." }
+  ],
+  "covers": [
+    { "id": "1a", "photo": "assets/cover-ground-mount.jpg", "crop": "center 58%", "accent": "#f4642f", "placement": "53.5%" },
+    { "id": "1b", "photo": "uploads/upload-1787985204328-wf26.webp", "crop": "center 60%", "accent": "#c42a60", "placement": "bottom: 78px" },
+    { "id": "1c", "photo": "uploads/upload-1787985197554-wvel.jpg", "crop": "center 40%", "accent": "#1a7f85", "placement": "top: 96px" },
+    { "id": "1d", "photo": "uploads/upload-1787985197550-0gvx.jpeg", "crop": "center 45%", "accent": "#e2334e", "placement": "53.5%, vertical rule" },
+    { "id": "1e", "photo": "uploads/upload-1787985197551-xgbs.jpeg", "crop": "center 55%", "accent": "#fa8a3c", "placement": "53.5%, right-aligned" },
+    { "id": "1f", "photo": "uploads/upload-1787985204328-wf26.webp", "crop": "25% 70%", "accent": "#9c7c46", "placement": "centred" },
+    { "id": "1g", "photo": "uploads/upload-1787985197551-xgbs.jpeg", "crop": "30% 60%", "accent": "#f4642f", "placement": "58%" },
+    { "id": "1h", "photo": "uploads/upload-1787985197554-wvel.jpg", "crop": "80% 50%", "accent": "#1a7f85", "placement": "53.5%" },
+    { "id": "1i", "photo": "uploads/upload-1787985204328-wf26.webp", "crop": "70% 35%", "accent": "#c42a60", "placement": "bottom: 78px" },
+    { "id": "1j", "photo": "uploads/upload-1787985197550-0gvx.jpeg", "crop": "20% 60%", "accent": "#fa8a3c", "placement": "53.5%, vertical rule" }
+  ]
+}
